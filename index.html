@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="1966년부터 2026년까지 대한민국 주화의 연도별 발행량을 확인하는 도감입니다.">
+  <title>대한민국 주화 발행량 도감</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <div class="brand-mark">KOREAN COIN ARCHIVE</div>
+      <p class="eyebrow">1966 — 2026 · MINTAGE RECORD</p>
+      <h1>대한민국 주화<br><em>발행량 도감</em></h1>
+      <p class="hero-copy">한눈에 살펴보는 우리나라 주화의 연도별 발행 기록</p>
+    </div>
+    <div class="hero-bottom"><span>COIN MINTAGE CATALOG</span><span>대한민국 주화 기록</span></div>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <div>
+        <p class="section-kicker">COIN SELECTOR</p>
+        <h2>주화 종류 선택</h2>
+        <p class="muted">확인하고 싶은 액면가를 선택하세요.</p>
+      </div>
+      <div class="range-chip">1966년–2026년</div>
+    </section>
+
+    <section class="coin-grid" id="coinGrid" aria-label="주화 종류 선택"></section>
+
+    <section class="data-section">
+      <div class="data-heading">
+        <div class="selected-coin">
+          <div class="selected-image-wrap"><img id="selectedCoinImage" src="images/coins/coin-500.png" alt="선택한 주화"></div>
+          <div>
+            <p class="section-kicker">YEARLY MINTAGE</p>
+            <h2 id="tableTitle">500원 주화 발행량</h2>
+            <p class="muted" id="coinDescription">학 도안 · 연도별 발행 수량</p>
+          </div>
+        </div>
+        <div class="table-tools">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="yearSearch" type="search" placeholder="연도 검색 (예: 1998)" aria-label="연도 검색"></label>
+          <select id="sortOrder" aria-label="연도 정렬">
+            <option value="asc">오래된 연도순</option>
+            <option value="desc">최근 연도순</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="legend-panel">
+        <div class="legend-title"><strong>발행량 색상 범례</strong><span>발행 수량이 적을수록 희소 구간 색상으로 표시</span></div>
+        <div class="legend-items" id="legendItems"></div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">발행 연도</th><th scope="col">발행량</th><th scope="col">구분</th></tr></thead>
+          <tbody id="coinRows"></tbody>
+        </table>
+      </div>
+      <p class="table-count" id="tableCount"></p>
+    </section>
+
+    <section class="notes">
+      <div class="note-icon">i</div>
+      <div>
+        <h3>자료 이용 안내</h3>
+        <p>이 웹사이트의 연도별 발행량은 한국은행의 공식 통계와 전수 대조가 완료된 자료가 아니므로, 연구·거래·감정의 확정 근거로 사용하기 전에 원자료 확인이 필요합니다.</p>
+        <p>‘미발행’은 제공된 표에 미발행으로 표시된 항목이며, ‘자료 확인 중’은 값이 확인되지 않은 경우를 뜻합니다. 2026년 수량은 추정치로 표시합니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">대한민국 주화 발행량 도감</div>
+    <div> KOREAN COIN MINTAGE CATALOG </div>
+    <small>본 사이트는 주화 발행량 정보 열람을 위한 비상업적 개인 프로젝트입니다.</small>
+  </footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
